@@ -1,0 +1,2 @@
+Saya tidak menggunakan API key untuk layanan peta. 
+Saya Menggunakan OpenStreetMap secara langsung.
