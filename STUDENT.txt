@@ -1,2 +1,3 @@
 Saya tidak menggunakan API key untuk layanan peta. 
 Saya Menggunakan OpenStreetMap secara langsung.
+URL Hasil Deploy Aplikasi : https://nikewulanavrilia.github.io/tempatceritaapp/#/ 
