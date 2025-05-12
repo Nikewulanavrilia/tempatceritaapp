@@ -36,17 +36,26 @@ export default class App {
       });
     });
   }
-
   async renderPage() {
   const url = getActiveRoute();
-  const page = routes[url] || routes['*']; 
-
+  const page = routes[url];
   const publicRoutes = ['/login', '/register'];
   if (!isUserLoggedIn() && !publicRoutes.includes(url)) {
     window.location.hash = '#/login';
     return;
   }
-
+  if (!page) {
+    if (document.startViewTransition) {
+      document.startViewTransition(async () => {
+        this.#content.innerHTML = await NotFoundPage.render();
+        await NotFoundPage.afterRender();
+      });
+    } else {
+      this.#content.innerHTML = await NotFoundPage.render();
+      await NotFoundPage.afterRender();
+    }
+    return;
+  }
   if (document.startViewTransition) {
     document.startViewTransition(async () => {
       this.#content.innerHTML = await page.render();
