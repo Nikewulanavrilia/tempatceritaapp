@@ -688,6 +688,26 @@ body {
   display: block;
   margin-bottom: 5px;
 }
+.not-found-page {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.not-found-page h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.not-found-page p {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.not-found-page a.btn {
+  margin-top: 1.5rem;
+}
+
 
 @media screen and (max-width: 1000px) {
   .brand-name {

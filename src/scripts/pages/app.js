@@ -1,6 +1,7 @@
 import routes from '../routes/routes';
 import { getActiveRoute } from '../routes/url-parser';
 import { isUserLoggedIn } from '../data/model';
+import NotFoundPage from './halaman_not_found/not-found-page';
 
 export default class App {
   #content = null;
@@ -37,28 +38,23 @@ export default class App {
   }
 
   async renderPage() {
-    const url = getActiveRoute();
-    const page = routes[url];
+  const url = getActiveRoute();
+  const page = routes[url] || routes['*']; 
 
-    if (!page) {
-      window.location.hash = '#/login';
-      return;
-    }
+  const publicRoutes = ['/login', '/register'];
+  if (!isUserLoggedIn() && !publicRoutes.includes(url)) {
+    window.location.hash = '#/login';
+    return;
+  }
 
-    const publicRoutes = ['/login', '/register'];
-    if (!isUserLoggedIn() && !publicRoutes.includes(url)) {
-      window.location.hash = '#/login';
-      return;
-    }
-
-    if (document.startViewTransition) {
-      document.startViewTransition(async () => {
-        this.#content.innerHTML = await page.render();
-        await page.afterRender();
-      });
-    } else {
+  if (document.startViewTransition) {
+    document.startViewTransition(async () => {
       this.#content.innerHTML = await page.render();
       await page.afterRender();
-    }
+    });
+  } else {
+    this.#content.innerHTML = await page.render();
+    await page.afterRender();
   }
+}
 }

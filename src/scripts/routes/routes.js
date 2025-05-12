@@ -4,6 +4,7 @@ import HomePage from '../pages/home/home-page';
 import DetailPage from '../pages/home/detail-cerita-page';
 import AddStoryPage from '../pages/cerita/tambah-cerita-page';
 import FavoritesPage from '../pages/home/favorites-page';
+import NotFoundPage from '../pages/halaman_not_found/not-found-page';
 
 const routes = {
   '/login': new LoginPage(),
@@ -12,5 +13,6 @@ const routes = {
   '/detail/:id': new DetailPage(),
   '/add-story': new AddStoryPage(),
   '/favorites': new FavoritesPage(),
+  '*': NotFoundPage,
 };
 export default routes;
