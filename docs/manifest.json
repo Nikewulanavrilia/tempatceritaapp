@@ -1,47 +1,54 @@
 {
-    "name": "Tempat Cerita",
-    "short_name": "Cerita",
-    "start_url": "./#/login",
-    "display": "standalone",
-    "background_color": "#5e686d",
-    "theme_color": "#5e686d",
-    "description": "Aplikasi cerita dengan fitur lokasi dan notifikasi",
-    "icons": [
-      {
-        "src": "icon-192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "icon-512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
-    ],
-    "shortcuts": [
+  "name": "Tempat Cerita",
+  "short_name": "Cerita",
+  "start_url": "/tempatceritaapp/#/login",
+  "scope": "/tempatceritaapp/",
+  "id": "/tempatceritaapp/",
+  "display": "standalone",
+  "background_color": "#5e686d",
+  "theme_color": "#5e686d",
+  "description": "Aplikasi cerita dengan fitur lokasi dan notifikasi",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
     {
       "name": "Tambah Cerita",
       "short_name": "Tambah",
       "description": "Langsung ke halaman tambah cerita",
-      "url": "/#/add-story",
-      "icons": [{ "src": "icon-192.png", "sizes": "192x192", "type": "image/png" }]
+      "url": "/tempatceritaapp/#/add-story",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
     }
   ],
-    "screenshots": [
-  {
-    "src": "screenshots/screenshot-desktop.png",
-    "sizes": "1280x720",
-    "type": "image/png",
-    "form_factor": "wide",
-    "label": "Tampilan desktop"
-  },
-  {
-    "src": "screenshots/screenshot-mobile.png",
-    "sizes": "360x640",
-    "type": "image/png",
-    "form_factor": "narrow",
-    "label": "Tampilan mobile"
-  }
-]
-  }
-  
+  "screenshots": [
+    {
+      "src": "screenshots/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Tampilan desktop"
+    },
+    {
+      "src": "screenshots/screenshot-mobile.png",
+      "sizes": "360x640",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Tampilan mobile"
+    }
+  ]
+}
