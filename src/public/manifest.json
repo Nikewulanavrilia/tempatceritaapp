@@ -28,18 +28,20 @@
     }
   ],
     "screenshots": [
-    {
-      "src": "screenshots/screenshot-desktop.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "label": "Tampilan desktop"
-    },
-    {
-      "src": "screenshots/screenshot-mobile.png",
-      "sizes": "360x640",
-      "type": "image/png",
-      "label": "Tampilan mobile"
-    }
-  ]
+  {
+    "src": "screenshots/screenshot-desktop.png",
+    "sizes": "1280x720",
+    "type": "image/png",
+    "form_factor": "wide",
+    "label": "Tampilan desktop"
+  },
+  {
+    "src": "screenshots/screenshot-mobile.png",
+    "sizes": "360x640",
+    "type": "image/png",
+    "form_factor": "narrow",
+    "label": "Tampilan mobile"
+  }
+]
   }
   
