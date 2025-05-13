@@ -40,10 +40,6 @@ export default class App {
   const url = getActiveRoute();
   const page = routes[url];
   const publicRoutes = ['/login', '/register'];
-  if (!isUserLoggedIn() && !publicRoutes.includes(url)) {
-    window.location.hash = '#/login';
-    return;
-  }
   if (!page) {
     if (document.startViewTransition) {
       document.startViewTransition(async () => {
@@ -54,6 +50,10 @@ export default class App {
       this.#content.innerHTML = await NotFoundPage.render();
       await NotFoundPage.afterRender();
     }
+    return;
+  }
+  if (!isUserLoggedIn() && !publicRoutes.includes(url)) {
+    window.location.hash = '#/login';
     return;
   }
   if (document.startViewTransition) {
